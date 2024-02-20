@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" >
+    <title>BusTime</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link th:href="@{/css/style.css}" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://js.api.here.com/v3/3.1/mapsjs-ui.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script type="text/javascript" src="https://js.api.here.com/v3/3.1/mapsjs-core.js"></script>
+    <script type="text/javascript" src="https://js.api.here.com/v3/3.1/mapsjs-service.js"></script>
+    <script type="text/javascript" src="https://js.api.here.com/v3/3.1/mapsjs-ui.js"></script>
+    <script type="text/javascript" src="https://js.api.here.com/v3/3.1/mapsjs-mapevents.js"></script>
+    <script th:src="@{/js/script.js}"></script> 
+</head>
+    <body onLoad="startClock()">
+      <div>
+        <h1 id="title">
+          <img src="/img/logo1.png" alt="Logo 1">
+        </h1>
+      </div>
+      <div id="clock_frame">
+        <b>現在時刻（JST） <a id="clock_time"></a></b>
+      </div>
+
+      <div id="btn"></div>
+
+      <div class="swiper sample-slider">
+        <div id="area" class="swiper-wrapper">
+          <div class="swiper-slide" id="bus_area">
+            <div class="route">赤56<br>(　赤羽　行き)<br>for Akabane</div>
+            <div class="next">
+              NEXT
+              <span id="bus"></span>
+              Dep. <span id="timeLeft"></span><br>
+
+              <!-- 今後追加予定 -->
+              <!-- （<span id="timeLeftHouse"></span> リミット）<br><br>  -->
+
+            </div><br>
+            <div class="next2">
+              2nd<span id="nbus"></span>
+              Dep. <span id="ntimeLeft"></span><br>
+            </div>
+            <div class="hide" onclick="officialLink()">　</div>
+            <div class="next3">
+              3rd<span id="nnbus"></span>
+              Dep. <span id="nntimeLeft"></span><br>
+            </div><br>
+            <button class="jikoku" onclick="openAka56Link()">Bus schedule</button>
+          </div>
+
+          <div class="swiper-slide" id="bus_area2">
+            <div class="route">東練01<br>(東武練馬行き)<br>for Tobunerima</div>
+            <div class="next">
+              NEXT
+              <span id="bus2"></span>
+              Dep. <span id="timeLeft2"></span><br>
+
+              <!-- 今後追加予定 -->
+              <!-- （<span id="timeLeftHouse"></span> リミット）<br><br>  -->
+
+            </div><br>
+            <div class="next2">
+              2nd<span id="nbus2"></span>
+              Dep. <span id="ntimeLeft2"></span><br>
+            </div>
+            <div class="hide" onclick="officialLink()">　</div>
+            <div class="next3">
+              3rd<span id="nnbus2"></span>
+              Dep. <span id="nntimeLeft2"></span><br>
+            </div><br>
+            <button class="jikoku" onclick="openTouneri01Link()">Bus schedule</button>
+          </div>
+
+          <div class="swiper-slide" id="bus_area3">
+            <div class="route">増17<br>(　成増　行き)<br>for Narimasu</div>
+            <div class="next">
+              NEXT
+              <span id="bus3"></span>
+              Dep. <span id="timeLeft3"></span><br>
+
+              <!-- 今後追加予定 -->
+              <!-- （<span id="timeLeftHouse"></span> リミット）<br><br>  -->
+
+            </div><br>
+            <div class="next2">
+              2nd<span id="nbus3"></span>
+              Dep. <span id="ntimeLeft3"></span><br>
+            </div>
+            <div class="hide" onclick="officialLink()">　</div>
+            <div class="next3">
+              3rd<span id="nnbus3"></span>
+              Dep. <span id="nntimeLeft3"></span><br>
+            </div><br>
+            <button class="jikoku" onclick="openMasu17Link()">Bus schedule</button>
+          </div>
+
+          <div class="swiper-slide" id="bus_area4">
+            <div class="route">高01<br>(　成増　行き)<br>for Narimasu</div>
+            <div class="next">
+              NEXT
+              <span id="bus4"></span>
+              Dep. <span id="timeLeft4"></span><br>
+
+              <!-- 今後追加予定 -->
+              <!-- （<span id="timeLeftHouse"></span> リミット）<br><br>  -->
+
+            </div><br>
+            <div class="next2">
+              2nd<span id="nbus4"></span>
+              Dep. <span id="ntimeLeft4"></span><br>
+            </div>
+            <div class="hide" onclick="officialLink()">　</div>
+            <div class="next3">
+              3rd<span id="nnbus4"></span>
+              Dep. <span id="nntimeLeft4"></span><br>
+            </div><br>
+            <button class="jikoku" onclick="openTaka01Link()">Bus schedule</button>
+          </div>
+        </div>
+      </div>
+      <div id="mapContainer"></div>
+      <div>
+        <h1 id="logo">
+          <img src="/img/logo2.png" alt="Logo 2">
+        </h1>
+      </div>
+    </body>
+</html>

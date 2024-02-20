@@ -1,0 +1,279 @@
+/*
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com
+Twitter: @rich_clark
+*/
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin:0;
+  padding:0;
+  border:0;
+  outline:0;
+  font-size:100%;
+  vertical-align:baseline;
+  background:transparent;
+}
+
+#title{
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+  color: #27235a;
+}
+
+#mapContainer {
+    display: flex;
+    align-items: center;
+    bottom: 0;
+    width: 80%; /* 左右のマージンを含めた幅を指定 */
+    height: 450px;
+    margin: 0 auto;
+    border: 2px solid;
+    color: #27235a;
+    margin-bottom: 25px;
+}
+
+body {
+  background-image: url("/img/bus.jpg");
+  margin-top: 130px;
+  background-size: cover; /* 画像を要素全体に広げる */
+  background-position: center;
+}
+
+/* p {
+  font-weight: bold;
+  margin-bottom: 0;
+  display: flex;
+  justify-content: center;
+  border: 2px solid;
+  color: #000000;
+  border-radius: 10px;
+  background: linear-gradient( 
+
+  to top,
+
+  #feffe8,
+  #ffffff,
+  #fffeed);
+  background:rgba(219, 219, 219, 0.93);
+} */
+
+#clock_frame {
+    color: #27235a;
+    font-family: "Gill Sans", sans-serif;
+    font-size: 25px;
+    width: 350px;
+    height: 65px;
+    margin: 0 auto; /* 水平方向に中央寄せ */
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    border: 2px solid;
+    background:rgba(253, 254, 255, 0.91);
+  /* background: linear-gradient( 
+
+  to top,
+
+  #ffffff,
+  #ffffff,
+  #ffffff); */
+}
+
+#bus_area, #bus_area2, #bus_area3, #bus_area4 {
+    color: #27235a;
+    background:rgba(253, 254, 255, 0.65);
+    font-family: "Gill Sans", sans-serif;
+    font-size: 15px;
+    width: 180px;
+    /* margin-left: 10px; */
+    margin: 30px 0px 30px 0px;
+    padding: 10px 10px 10px 10px;
+    border-radius: 10px;
+    border: 2px solid;
+}
+
+/* .area {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    z-index: 10;
+    margin-top: 15px;
+    margin-bottom: 40px;
+} */
+
+#bus, #nbus, #nnbus, #bus2, #nbus2, #nnbus2, #bus3, #nbus3, #nnbus3, #bus4, #nbus4, #nnbus4 {
+    color: rgb(0, 0, 0);
+    text-align: center;
+    display: block;
+    margin-right: 10px;
+    padding: 5px 0px 5px 0px;
+    font-size: 20px;
+}
+
+#bus, #bus2, #bus3, #bus4{
+  color: rgb(34, 114, 206);
+  font-weight: bold;
+}
+
+[id*="timeLeft"] {
+    background-color: rgb(255, 254, 170);
+    font-weight: bold;
+}
+
+[id*="ntimeLeft"] {
+    background-color: rgb(255, 254, 197);
+    font-weight: bold;
+}
+
+[id*="nntimeLeft"] {
+    background-color: rgb(255, 254, 227);
+    font-weight: bold;
+}
+
+#btn input {
+    margin-right: 5px;
+}
+
+.jikoku {
+  display: block;
+  margin: 0 auto;
+  padding: 10px 5px 10px 5px;
+}
+
+[class*="next"]{
+  border: 1px solid;
+  color: #27235a;
+  background-color: #fffefaf6;
+  padding: 5px;
+  margin: 0px 9px 0px 9px;
+  border-radius: 5px;
+    background: linear-gradient( 
+
+  to top,
+
+  #f1f6ff,
+  #ffffff,
+  #ffffff,
+  #ffffff,
+  #f1f6ff)
+}
+
+/* [id*="bus_area"] {
+  transform-origin: top left;
+  transition: transform .3s;
+      z-index: 10;
+}
+
+[id*="bus_area2"] {
+  transform-origin: top;
+  transition: transform .3s;
+}
+
+[id*="bus_area3"] {
+  transform-origin: top;
+  transition: transform .3s;
+}
+
+[id*="bus_area4"] {
+  transform-origin: top right;
+  transition: transform .3s;
+}
+
+[id*="bus_area"]:hover {
+  cursor: zoom-in;
+  z-index: 15;
+}
+
+[id*="bus_area"].scale {
+  transform: scale(2.1, 2.1);
+  z-index: 15;
+}
+
+[id*="bus_area"].scale:hover {
+  cursor: zoom-out;
+  z-index: 15;
+} */
+
+.hide {
+  width: 10px;
+}
+
+#logo{
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+  color: #27235a;
+  margin-bottom: 30px;
+}
+
+#logo img {
+  width: 200px;
+  height: auto;
+}
+
+.route {
+	position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  padding: 18px 0px 18px 0px;
+  background: linear-gradient( 
+
+  to top,
+
+  #000a36,
+  #eff4ff,
+  #ffffff,
+  #ffffeb,
+  #ffffff,
+  #eff4ff,
+  #000a36);
+  border: solid 2px #000000;
+  border-radius: 10px;
+  font-weight: bold;
+  color: #000000;
+}
+
+.route::before,
+.route::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 8px;
+    background-size: 8px 8px;
+}
+
+.route::before {
+    top: 0;
+    left: 0;
+    background-image: repeating-linear-gradient(45deg, #000000 0px, #000000 1px, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 50%);
+    margin-top: 6px;
+}
+
+.route::after {
+    bottom: 0;
+    left: 0;
+    background-image: repeating-linear-gradient(45deg, #000000 0px, #000000 1px, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 50%);
+    margin-bottom: 6px;
+}
+
+.swiper-slide{
+    box-sizing: border-box;
+}
